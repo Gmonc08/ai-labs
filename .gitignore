@@ -1,0 +1,67 @@
+# =============================================================================
+# .gitignore — ai-labs
+# Stack: Python + FastAPI + Next.js + Docker + LangChain
+# =============================================================================
+
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.log
+
+# --- Jupyter ----------------------------------------------------------------
+.ipynb_checkpoints/
+
+# --- Variabili d'ambiente ---------------------------------------------------
+.env
+.env.local
+*.env
+
+# --- ML / AI ----------------------------------------------------------------
+*.joblib
+*.pkl
+*.h5
+*.pt
+*.onnx
+# Vector store locale (può essere pesante)
+**/chroma_db/
+**/faiss_index/
+
+# --- Dati pesanti -----------------------------------------------------------
+*.csv
+*.parquet
+*.pdf
+!**/sample_*.csv
+
+# --- Node -------------------------------------------------------------------
+node_modules/
+.next/
+*.tsbuildinfo
+
+# --- Docker -----------------------------------------------------------------
+docker-compose.override.yml
+postgres-data/
+pgdata/
+
+# --- Database locali --------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Editor -----------------------------------------------------------------
+.vscode/extensions.json
+.idea/
+*.swp
+*~
+.DS_Store
+
+# --- Secrets ----------------------------------------------------------------
+*.pem
+*.key
+secrets/
